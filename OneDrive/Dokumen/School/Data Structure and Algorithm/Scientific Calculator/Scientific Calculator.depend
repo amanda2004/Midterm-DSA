@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1696673892 source:c:\users\amand\onedrive\dokumen\school\data structure and algorithm\scientific calculator\src\history.cpp
+	"History.h"
+	<iostream>
+	<cstdlib>
+
+1696671325 c:\users\amand\onedrive\dokumen\school\data structure and algorithm\scientific calculator\include\history.h
+
+1696674367 source:c:\users\amand\onedrive\dokumen\school\data structure and algorithm\scientific calculator\main.cpp
+	<iostream>
+	<cstdlib>
+	"advance_trig.h"
+
+1696674278 c:\users\amand\onedrive\dokumen\school\data structure and algorithm\scientific calculator\include\advance_trig.h
+
+1696674834 source:c:\users\amand\onedrive\dokumen\school\data structure and algorithm\scientific calculator\src\advance_trig.cpp
+	"advance_trig.h"
+	<cmath>
+	<cstdlib>
+	<iostream>
+

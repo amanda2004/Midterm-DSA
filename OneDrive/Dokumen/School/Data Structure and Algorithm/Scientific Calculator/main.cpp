@@ -1,12 +1,19 @@
 #include <iostream>
+<<<<<<< HEAD
+#include <cstdlib>
+#include "advance_trig.h"
+=======
 #include <cmath>   
 #include <cstdlib> 
 #define PI 3.141592654
+>>>>>>> bbd3a209f71386f88cf351cb01f39e8764704368
 
 using namespace std;
 
 char chosen;
 
+<<<<<<< HEAD
+=======
 class advance_trig {
 public:
     char selected;
@@ -77,22 +84,75 @@ public:
     }
 };
 
+>>>>>>> bbd3a209f71386f88cf351cb01f39e8764704368
 int main() {
     system("cls");
     do {
         cout << "==== Welcome to our Scientific Calculator! ====" << endl;
+<<<<<<< HEAD
+
+=======
         
+>>>>>>> bbd3a209f71386f88cf351cb01f39e8764704368
         cout << "Press 0 to exit" << endl;
         cout << "Press 1 for addition" << endl;
         cout << "Press 2 for subtraction" << endl;
         cout << "Press 3 for multiplication" << endl;
         cout << "Press 4 for division" << endl;
+<<<<<<< HEAD
+        cout << "Press 5 for square root" << endl;
+        cout << "Press 6 for exponents" << endl;
+        cout << "Press 7 for logarithms" << endl;
+        cout << "Press 8 for ln" << endl;
+        cout << "Press 9 for trigonometry function" << endl;
+        cout << "Press 10 for advance trigonometry function" << endl;
+        cout << "Press 11 for showing the history list" << endl;
+=======
         cout << "Press 5 for trigonometry function" << endl;
         cout << "Press 6 for advance trigonometry function " << endl;
+>>>>>>> bbd3a209f71386f88cf351cb01f39e8764704368
         cout << "What function do you want to use? " << endl;
         cin >> chosen;
         switch (chosen) {
             case '1':
+<<<<<<< HEAD
+
+                break;
+
+            case '2':
+
+                break;
+
+            case '3':
+
+                break;
+
+            case '4':
+
+                break;
+
+            case '5':
+
+                break;
+
+            case '6':
+
+                break;
+
+            case '7':
+
+                break;
+
+            case '8':
+
+                break;
+
+            case '9':
+
+                break;
+
+            case '10':
+=======
                 
                 break;
 
@@ -113,11 +173,26 @@ int main() {
                 break;
 
             case '6':
+>>>>>>> bbd3a209f71386f88cf351cb01f39e8764704368
             {
                 advance_trig advTrig;
                 advTrig.start();
                 break;
             }
+<<<<<<< HEAD
+
+            case '11':
+
+                break;
+
+            case '0':
+                exit(0);
+
+                break;
+
+            default:
+
+=======
             case '0':
                 exit(0);
                 
@@ -125,6 +200,7 @@ int main() {
                 
             default:
                 
+>>>>>>> bbd3a209f71386f88cf351cb01f39e8764704368
                 cout << "Invalid input" << endl;
                 system("cls");
         }
