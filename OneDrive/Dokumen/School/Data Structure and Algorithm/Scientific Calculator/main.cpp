@@ -52,8 +52,8 @@ public:
         cin >> x;
 
         result = acos(x);
-        cout << "acos(x) = " << result << " radians" << endl;
-        cout << "acos(x) = " << result * 180 / PI << " degrees" << endl << endl;
+        cout << "arccos" << "(" << x << ")" << " = " << result << " radians" << endl;
+        cout << "arcos" << "(" << x << ")" << " = " << result * 180 / PI << " degrees" << endl << endl;
     }
 
     void arcsin() {
@@ -62,8 +62,8 @@ public:
         cin >> x;
 
         result = asin(x);
-        cout << "asin(x) = " << result << " radians" << endl;
-        cout << "asin(x) = " << result * 180 / PI << " degrees" << endl << endl;
+        cout << "arcsin" << "(" << x << ")" << " = " << result << " radians" << endl;
+        cout << "arcsin" << "(" << x << ")" << " = " << result * 180 / PI << " degrees" << endl << endl;
     }
 
     void arctan() {
@@ -72,8 +72,8 @@ public:
         cin >> x;
 
         result = atan(x);
-        cout << "atan(x) = " << result << " radians" << endl;
-        cout << "atan(x) = " << result * 180 / PI << " degrees" << endl << endl;
+        cout << "arctan" << "(" << x << ")" << " = " << result << " radians" << endl;
+        cout << "arctan" << "(" << x << ")" << " = " << result * 180 / PI << " degrees" << endl << endl;
     }
 };
 
