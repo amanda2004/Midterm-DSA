@@ -3,6 +3,7 @@
 #include "advance_trig.h"
 #include "History.h"
 #include "powerclass.h"
+#include "sqrt.h"
 
 using namespace std;
 
