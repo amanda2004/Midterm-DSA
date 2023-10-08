@@ -1,6 +1,7 @@
 // advance_trig.h
 #ifndef ADVANCE_TRIG_H // This line checks if ADVANCE_TRIG_H has not been defined yet
 #define ADVANCE_TRIG_H // This line defines ADVANCE_TRIG_H
+#include "History.h"
 
 // This is the declaration of the advance_trig class
 class advance_trig
@@ -14,10 +15,10 @@ class advance_trig
         }
 
         // These are declarations for public member functions of the advance_trig class
-        void start(); // This function will start the program
-        void arccos(); // This function will calculate the arccosine
-        void arcsin(); // This function will calculate the arcsine
-        void arctan(); // This function will calculate the arctangent
+        void start(history_list& history); // This function will start the program
+        void arccos(history_list& history); // This function will calculate the arccosine
+        void arcsin(history_list& history); // This function will calculate the arcsine
+        void arctan(history_list& history); // This function will calculate the arctangent
 };
 
 #endif // This line ends the conditional directive from the #ifndef at the top
