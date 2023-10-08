@@ -46,6 +46,7 @@ int main() {
         cout << "Press 10 for trigonometry function" << endl;
         cout << "Press 11 for advance trigonometry function" << endl;
         cout << "Press 12 for showing the history list" << endl;
+        cout << "Press 13 for deleting the calculator's history" << endl;
 
         int chosen;
         cout << "What function do you want to use? ";
@@ -101,12 +102,17 @@ int main() {
                 history.show_history();
                 break;
 
+            case 13:
+                history.delete_history();
+                cout << "History deleted." << endl << endl;
+                break;
+            
             case 0:
                 exit(0);
                 break;
 
             default:
-                cout << "Invalid input" << endl;
+                cout << "Invalid input" << endl << endl;
                 system("cls");
         }
     } while (true);
