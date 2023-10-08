@@ -2,7 +2,7 @@
 #define LOG10_H
 
 
-class log10
+class logarithms10
 {
     public:
         void start ();
