@@ -20,18 +20,22 @@ void Trigonometry::start(history_list& history)
         {
         case '1':
             calculateSine(history);
+            cout << "\n";
             break;
 
         case '2':
             calculateCosine(history);
+            cout << "\n";
             break;
 
         case '3':
             calculateTangent(history);
+            cout << "\n";
             break;
 
         case '0':
             return;
+            cout << "\n";
             break;
 
         default:
