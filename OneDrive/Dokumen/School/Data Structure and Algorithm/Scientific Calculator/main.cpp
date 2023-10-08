@@ -10,6 +10,7 @@ int main() {
     history_list history;
     advance_trig advTrig;
     power pow;
+    sqrt square_root;
 
     system("cls");
     do {
@@ -52,7 +53,7 @@ int main() {
                 break;
 
             case 5:
-
+                square_root.start();
                 break;
 
             case 6:
