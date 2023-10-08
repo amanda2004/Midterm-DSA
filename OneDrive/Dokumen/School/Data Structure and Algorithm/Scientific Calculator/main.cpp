@@ -6,6 +6,7 @@
 #include "sqrt.h"
 #include "log10.h"
 #include "naturallogarithm.h"
+#include "LogCustomBase.h"
 using namespace std;
 
 int main() {
@@ -15,6 +16,7 @@ int main() {
     sqrt square_root;
     logarithms10 logarithms_10;
     naturallogarithm ln_function;
+    LogCustomBase logcustom_function;
 
     system("cls");
     do {
@@ -69,7 +71,7 @@ int main() {
                 break;
 
             case 8:
-
+                logcustom_function.start();
                 break;
 
             case 9:
