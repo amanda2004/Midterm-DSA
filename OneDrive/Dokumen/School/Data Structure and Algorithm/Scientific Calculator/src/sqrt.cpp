@@ -1,11 +1,13 @@
 #include <iostream>
 #include <cmath>
-#define PI 3.141592654
+#include <string>
 #include <cstdlib>
-#include <sqrt.h>
+#include "sqrt.h"
+#include "Histroy.h"
+
 using namespace std;
 
-void sqrtCalculator::start()
+void sqrtCalculator::start(history_list& history)
 {
     double sqrtnum;
     cout << "Enter a number: ";
@@ -14,4 +16,7 @@ void sqrtCalculator::start()
     double sqrtval = sqrt(sqrtnum);
     cout << "The square root of " << sqrtnum << " is " << sqrtval << "\n";
 
+    //to store the result in the calculator's history
+    string output = "The square root of " + to_string(sqrtnum) + " is " + to_string(sqrtval);
+    history.add_result(output);
 }
