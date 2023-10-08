@@ -7,6 +7,8 @@
 #include "log10.h"
 #include "naturallogarithm.h"
 #include "LogCustomBase.h"
+#include "addition.h"
+
 using namespace std;
 
 int main() {
@@ -17,6 +19,7 @@ int main() {
     logarithms10 logarithms_10;
     naturallogarithm ln_function;
     LogCustomBase logcustom_function;
+    addition add;
 
     system("cls");
     do {
@@ -43,7 +46,7 @@ int main() {
 
         switch (chosen) {
             case 1:
-
+                add.start();
                 break;
 
             case 2:
