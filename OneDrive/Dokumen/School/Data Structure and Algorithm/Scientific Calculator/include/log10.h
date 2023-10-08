@@ -1,11 +1,11 @@
 #ifndef LOG10_H
 #define LOG10_H
-
+#include "History.h"
 
 class logarithms10
 {
     public:
-        void start ();
+        void start (history_list& history);
 
 };
 
