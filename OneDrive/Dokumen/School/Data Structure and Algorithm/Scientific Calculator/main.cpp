@@ -9,6 +9,7 @@
 #include "LogCustomBase.h"
 #include "addition.h"
 #include "substraction.h"
+#include "Trigonometry.h"
 
 using namespace std;
 
@@ -22,6 +23,7 @@ int main() {
     LogCustomBase logcustom_function;
     addition add;
     substraction subs;
+    Trigonometry trig_function;
 
     system("cls");
     do {
@@ -84,7 +86,7 @@ int main() {
                 break;
 
             case 10:
-
+                trig_function.start();
                 break;
 
             case 11:
