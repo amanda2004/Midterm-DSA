@@ -22,9 +22,9 @@ using namespace std;
     // Check if the second number is not zero to avoid division by zero
     if (num2 != 0) {
         result = num1 / num2;
-        cout << "Result of division: " << result << endl;
+        cout << "Result of division: " << result << endl << endl;
     } else {
-        cout << "Error: Division by zero is not allowed." << endl;
+        cout << "Error: Division by zero is not allowed." << endl << endl;
     }
 
     //to store the result in the calculator's history
