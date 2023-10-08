@@ -8,6 +8,7 @@
 #include "naturallogarithm.h"
 #include "LogCustomBase.h"
 #include "addition.h"
+#include "Trigonometry.h"
 
 using namespace std;
 
@@ -20,6 +21,7 @@ int main() {
     naturallogarithm ln_function;
     LogCustomBase logcustom_function;
     addition add;
+    Trigonometry trig_function;
 
     system("cls");
     do {
@@ -82,7 +84,7 @@ int main() {
                 break;
 
             case 10:
-
+                trig_function.start();
                 break;
 
             case 11:
