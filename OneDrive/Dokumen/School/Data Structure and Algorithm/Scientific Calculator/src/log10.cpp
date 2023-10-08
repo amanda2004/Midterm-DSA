@@ -2,7 +2,7 @@
     #include <cmath>
     #include <cstdlib>
     #define PI 3.141592654
-    #include "logarithms10.h"
+    #include "log10.h"
 
     void logarithms10::start()
     {
