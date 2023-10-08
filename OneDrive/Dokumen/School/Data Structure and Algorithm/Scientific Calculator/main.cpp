@@ -54,7 +54,7 @@ int main() {
 
         switch (chosen) {
             case 1:
-                add.start();
+                add.start(history);
                 break;
 
             case 2:
