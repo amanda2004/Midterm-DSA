@@ -1,11 +1,12 @@
-    #include <iostream>
-    #include <cmath>
-    #include <cstdlib>
-    #define PI 3.141592654
-    #include "log10.h"
+#include <iostream>
+#include <cmath>
+#include <cstdlib>
+#include <string>
+#include "log10.h"
+#include "History.h"
 
-    void logarithms10::start()
-    {
+void logarithms10::start(history_list& history)
+{
     // To declare the number that the user s going to input as a variable
     double log10num;
     // Asking the user to input the number
@@ -17,4 +18,8 @@
     double log10val = log10  (log10num);
     // Showing the result to the user
     std::cout << "The value of " << log10num << " to the base of 10 is " << log10val << "\n";
+
+    //to store the result in the calculator's history
+    string output = "The value of " + to_string(log10num) + " to the base of 10 is " + to_string(log10val);
+    history.add_result(output);
     }
