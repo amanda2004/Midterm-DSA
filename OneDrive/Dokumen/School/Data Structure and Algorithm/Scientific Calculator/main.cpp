@@ -60,7 +60,7 @@ int main() {
                 break;
 
             case 3:
-                mul.start
+                mul.start();
                 break;
 
             case 4:
