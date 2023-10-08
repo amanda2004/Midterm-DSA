@@ -1,10 +1,11 @@
 #include "division.h"
+#include "History.h"
 #include <cmath>
 #include <cstdlib>
 #include <iostream>
-#define PI 3.141592654
+#include <string>
 
-void division::start()
+void division::start(history_list& history)
 {
 
 using namespace std;
@@ -25,4 +26,8 @@ using namespace std;
     } else {
         cout << "Error: Division by zero is not allowed." << endl;
     }
+
+    //to store the result in the calculator's history
+    string output = to_string(num1) + " / " + to_string(num2) + " = " + to_string(result);
+    history.add_result(output);
 }
