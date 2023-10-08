@@ -39,6 +39,8 @@ void history_list::show_history(){
         cout << current -> data << endl;
         current = current -> next;
     }
+
+    cout << "\n";
 }
 
 void history_list::delete_history(){
