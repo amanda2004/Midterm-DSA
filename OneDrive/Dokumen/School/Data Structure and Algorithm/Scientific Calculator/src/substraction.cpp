@@ -23,7 +23,7 @@ using namespace std;
     result = num1 - num2;
 
     // Display the result
-    cout << "Result: " << result << endl;
+    cout << "Result: " << result << endl << endl;
 
     //to store the result in the calculator's history
     string output = to_string(num1) + " - " + to_string(num2) + " = " + to_string(result);
