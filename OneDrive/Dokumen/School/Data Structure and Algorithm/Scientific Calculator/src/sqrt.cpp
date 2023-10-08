@@ -5,7 +5,7 @@
 #include <sqrt.h>
 using namespace std;
 
-void sqrt::start()
+void sqrtCalculator::start()
 {
     double sqrtnum;
     cout << "Enter a number: ";
