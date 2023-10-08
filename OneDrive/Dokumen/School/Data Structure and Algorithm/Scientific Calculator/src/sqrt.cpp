@@ -3,7 +3,7 @@
 #include <string>
 #include <cstdlib>
 #include "sqrt.h"
-#include "Histroy.h"
+#include "History.h"
 
 using namespace std;
 
