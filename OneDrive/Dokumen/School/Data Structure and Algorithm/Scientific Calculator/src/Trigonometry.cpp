@@ -10,10 +10,10 @@ using namespace std;
 void Trigonometry::start(history_list& history)
 {
     do {
-        cout << "Press 0 for back to main calculator" << endl;
         cout << "Press 1 for Sin" << endl;
         cout << "Press 2 for Cos" << endl;
         cout << "Press 3 for Tan" << endl;
+        cout << "Select a Function (or press 0 to exit): ";
         cin >> selected;
 
         switch (selected)
