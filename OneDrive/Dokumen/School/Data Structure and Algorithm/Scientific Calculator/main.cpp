@@ -11,6 +11,7 @@
 #include "substraction.h"
 #include "Trigonometry.h"
 #include "multiplication.h"
+#include "division.h"
 
 using namespace std;
 
@@ -26,6 +27,7 @@ int main() {
     substraction subs;
     Trigonometry trig_function;
     multiplication mul;
+    division div;
 
     system("cls");
     do {
@@ -64,7 +66,7 @@ int main() {
                 break;
 
             case 4:
-
+                div.start();
                 break;
 
             case 5:
