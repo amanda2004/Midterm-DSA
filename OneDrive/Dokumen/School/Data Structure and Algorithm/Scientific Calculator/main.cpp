@@ -15,7 +15,7 @@ int main() {
     history_list history;
     advance_trig advTrig;
     power pow;
-    sqrt square_root;
+    sqrtCalculator square_root;
     logarithms10 logarithms_10;
     naturallogarithm ln_function;
     LogCustomBase logcustom_function;
