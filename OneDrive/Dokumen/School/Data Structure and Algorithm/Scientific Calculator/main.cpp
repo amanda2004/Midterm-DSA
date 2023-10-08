@@ -58,7 +58,7 @@ int main() {
                 break;
 
             case 2:
-                subs.start();
+                subs.start(history);
                 break;
 
             case 3:
