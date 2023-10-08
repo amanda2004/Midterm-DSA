@@ -8,6 +8,7 @@
 #include "naturallogarithm.h"
 #include "LogCustomBase.h"
 #include "addition.h"
+#include "substraction.h"
 
 using namespace std;
 
@@ -20,6 +21,7 @@ int main() {
     naturallogarithm ln_function;
     LogCustomBase logcustom_function;
     addition add;
+    substraction subs;
 
     system("cls");
     do {
@@ -50,7 +52,7 @@ int main() {
                 break;
 
             case 2:
-
+                subs.start();
                 break;
 
             case 3:
