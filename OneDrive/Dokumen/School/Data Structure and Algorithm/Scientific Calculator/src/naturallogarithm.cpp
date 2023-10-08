@@ -14,7 +14,7 @@ void naturallogarithm::start(history_list& history)
     cin >> lnnum;
 
     double lnval = log (lnnum);
-    cout << "The ln of " << lnnum << " is " << lnval << "\n";
+    cout << "The ln of " << lnnum << " is " << lnval << "\n" << "\n";
 
     //to store the result in the calculator's history
     string output = "The ln of " + to_string(lnnum) + " is " + to_string(lnval);
