@@ -62,15 +62,15 @@ int main() {
                 break;
 
             case 3:
-                mul.start();
+                mul.start(history);
                 break;
 
             case 4:
-                div.start();
+                div.start(history);
                 break;
 
             case 5:
-                square_root.start();
+                square_root.start(history);
                 break;
 
             case 6:
@@ -78,23 +78,23 @@ int main() {
                 break;
 
             case 7:
-                logarithms_10.start();
+                logarithms_10.start(history);
                 break;
 
             case 8:
-                logcustom_function.start();
+                logcustom_function.start(history);
                 break;
 
             case 9:
-                ln_function.start();
+                ln_function.start(history);
                 break;
 
             case 10:
-                trig_function.start();
+                trig_function.start(history);
                 break;
 
             case 11:
-                advTrig.start();
+                advTrig.start(history);
                 break;
             
             case 12:
