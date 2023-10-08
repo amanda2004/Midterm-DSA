@@ -1,11 +1,11 @@
 #ifndef SUBSTRACTION_H
 #define SUBSTRACTION_H
-
+#include "History.h"
 
 class substraction
 {
     public:
-        void start();
+        void start(history_list& history);
 
 };
 
