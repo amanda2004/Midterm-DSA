@@ -29,7 +29,7 @@ void history_list::add_result(string result){
 
 void history_list::show_history(){
     if(!head){
-        cout << "Calculator History is not available." << endl;
+        cout << "Calculator History is not available." << endl << endl;
         return;
     }
 
