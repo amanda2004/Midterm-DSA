@@ -4,7 +4,7 @@
     #define PI 3.141592654
     #include "logarithms10.h"
 
-    void logarithms10::start 
+    void logarithms10::start()
     {
     double log10num;
     std::cout << "Enter a number: ";
