@@ -1,5 +1,5 @@
-#ifndef ADDITION_H
-#define ADDITION_H
+#ifndef SUBSTRACTION_H
+#define SUBSTRACTION_H
 
 
 class substraction
