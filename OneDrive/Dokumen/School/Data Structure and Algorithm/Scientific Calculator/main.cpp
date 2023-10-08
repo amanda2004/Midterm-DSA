@@ -5,6 +5,7 @@
 #include "powerclass.h"
 #include "sqrt.h"
 #include "logarithms10.h"
+#include "naturallogarithm.h"
 using namespace std;
 
 int main() {
@@ -13,6 +14,7 @@ int main() {
     power pow;
     sqrt square_root;
     logarithms10 logarithms_10;
+    naturallogarithm ln_function;
 
     system("cls");
     do {
@@ -71,7 +73,7 @@ int main() {
                 break;
 
             case 9:
-
+                ln_function.start();
                 break;
 
             case 10:
