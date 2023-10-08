@@ -24,7 +24,7 @@ using namespace std;
     result = num1 + num2;
 
     // Display the result
-    cout << "The sum is: " << result << endl;
+    cout << "The sum is: " << result << endl << endl;
 
     //to store the result in calculator's history
     string output = to_string(num1) + " + " + to_string(num2) + " = " + to_string(result);
