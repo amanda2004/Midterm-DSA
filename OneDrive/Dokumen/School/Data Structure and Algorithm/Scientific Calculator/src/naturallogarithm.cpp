@@ -1,11 +1,13 @@
 #include "naturallogarithm.h"
+#include "History.h"
 #include <iostream>
-#define PI 3.141592654
+#include <string>
 #include <cmath>
 #include <cstdlib>
+
 using namespace std;
 
-void naturallogarithm::start()
+void naturallogarithm::start(history_list& history)
 {
     double lnnum;
     cout << "Enter a number: ";
@@ -13,4 +15,8 @@ void naturallogarithm::start()
 
     double lnval = log (lnnum);
     cout << "The ln of " << lnnum << " is " << lnval << "\n";
+
+    //to store the result in the calculator's history
+    string output = "The ln of " + to_string(lnnum) + " is " + to_string(lnval);
+    history.add_result(output);
 }
