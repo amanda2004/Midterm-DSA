@@ -1,7 +1,7 @@
 #ifndef SQRT_H
 #define SQRT_H
 
-class sqrt
+class sqrtCalculator
 {
 public:
     void start ();
