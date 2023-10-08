@@ -1,11 +1,12 @@
 #ifndef multiplication_H
 #define multiplication_H
+#include "History.h"
 
 
 class multiplication
 {
     public:
-        void start();
+        void start(history_list& history);
 
 };
 
