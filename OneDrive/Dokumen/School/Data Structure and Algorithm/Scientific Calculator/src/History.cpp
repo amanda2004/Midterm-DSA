@@ -40,3 +40,13 @@ void history_list::show_history(){
         current = current -> next;
     }
 }
+
+void history_list::delete_history(){
+    while(head){
+        Node* temp = head;
+        head = head -> next;
+        delete temp;
+    }
+
+    tail = nullptr;
+}
