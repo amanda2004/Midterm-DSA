@@ -34,6 +34,7 @@ void advance_trig::start(history_list& history)
 
             case 0:
                 return;  // If selected is 0, this line ends the function
+                cout << "\n";
                 break;
 
             default:
