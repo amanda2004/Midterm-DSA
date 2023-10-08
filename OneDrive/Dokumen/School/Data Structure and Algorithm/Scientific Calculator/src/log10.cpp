@@ -17,7 +17,7 @@ void logarithms10::start(history_list& history)
     // Declaring that the variable log10val is the result of log(log10num)
     double log10val = log10  (log10num);
     // Showing the result to the user
-    std::cout << "The value of " << log10num << " to the base of 10 is " << log10val << "\n";
+    std::cout << "The value of " << log10num << " to the base of 10 is " << log10val << "\n" << "\n";
 
     //to store the result in the calculator's history
     string output = "The value of " + to_string(log10num) + " to the base of 10 is " + to_string(log10val);
