@@ -1,10 +1,11 @@
 #include "addition.h"
+#include "History.h"
 #include <cmath>
 #include <cstdlib>
 #include <iostream>
-#define PI 3.141592654
+#include <string>
 
-void addition::start()
+void addition::start(history_list& history)
 {
 
 using namespace std;
@@ -24,4 +25,8 @@ using namespace std;
 
     // Display the result
     cout << "The sum is: " << result << endl;
+
+    //to store the result in calculator's history
+    string output = to_string(num1) + " + " + to_string(num2) + " = " + to_string(result);
+    history.add_result(output);
 }
