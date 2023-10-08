@@ -17,7 +17,7 @@ void LogCustomBase::start(history_list& history)
     cin >> value;
       
     double logcustom = log(value) / log(base);
-    cout << "The value of " << value << " with the base of " << base << " is " << logcustom;
+    cout << "The value of " << value << " with the base of " << base << " is " << logcustom << "\n" << "\n";
 
     //to store the result in the calculator's history
     string output = "The value of " + to_string(value) + " with the base of " + to_string(base) + " is " + to_string(logcustom);
