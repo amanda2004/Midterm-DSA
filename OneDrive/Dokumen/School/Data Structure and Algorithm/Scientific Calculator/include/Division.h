@@ -1,11 +1,12 @@
 #ifndef DIVISION_H
 #define DIVISION_H
+#include "History.h"
 
 
 class division
 {
     public:
-        void start();
+        void start(history_list& history);
 
 };
 
