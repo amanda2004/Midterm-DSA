@@ -1,4 +1,6 @@
 #include "advance_trig.h" // This line includes the header file for the advance_trig class
+#include "History.h"
+#include <string>
 #include <cmath> // This line includes the cmath library, which provides mathematical functions
 #include <cstdlib> // This line includes the cstdlib library, which provides general purpose functions
 #include <iostream> // This line includes the iostream library, which provides basic input and output services
@@ -7,7 +9,7 @@
 using namespace std;
 
 // This is the definition of the start function for the advance_trig class
-void advance_trig::start()
+void advance_trig::start(history_list& history)
 {
     do {
         cout << "Press 1 for arccos" << endl; // This line prints a message
@@ -19,15 +21,15 @@ void advance_trig::start()
 
         switch (selected) { // This switch statement performs different actions based on the value of selected
             case 1:
-                arccos(); // If input from user is 1 it means the selected is 1, which corresponds to case 1 in the switch statement so this line calls the arccos function
+                arccos(history); // If input from user is 1 it means the selected is 1, which corresponds to case 1 in the switch statement so this line calls the arccos function
                 break;
 
             case 2:
-                arcsin(); // If input from user is 2 it means the selected is 2, which corresponds to case 2 in the switch statement so this line calls the arcsin function
+                arcsin(history); // If input from user is 2 it means the selected is 2, which corresponds to case 2 in the switch statement so this line calls the arcsin function
                 break;
 
             case 3:
-                arctan(); // If input from user is 3 it means the selected is 3, which corresponds to case 3 in the switch statement so this line calls the arctan function
+                arctan(history); // If input from user is 3 it means the selected is 3, which corresponds to case 3 in the switch statement so this line calls the arctan function
                 break;
 
             case 0:
@@ -41,36 +43,63 @@ void advance_trig::start()
 }
 
 // This is the definition of the arccos function for the advance_trig class
-void advance_trig::arccos(){
+void advance_trig::arccos(history_list& history){
 
-    double x, result; // These are variables to store the input and the result
+    double x, result, result2; // These are variables to store the input and the result
         cout << "Enter your number in the range [-1, 1]: ";  // This line prompts the user to enter a number
         cin >> x; // This line gets input from the user and stores it in x
 
 
         result = acos(x); // The acos function from the cmath library is used to calculate the arccosine of x
         cout << "arccos" << "(" << x << ") = " <<  result << " radians" << endl; // This line prints the result in radians
-        cout << "arccos" << "(" << x << ") = " << result * 180 / PI << " degrees" << endl << endl;  // This line prints the result in degrees
+
+        result2 = result * 180 / PI;
+        cout << "arccos" << "(" << x << ") = " << result2 << " degrees" << endl << endl;  // This line prints the result in degrees
+
+        //to store the result in the calculator's history
+        string output = "arccos (" + to_string(x) + ") = " + to_string(result) + " radians";
+        history.add_result(output);
+
+        string output2 = "arccos (" + to_string(x) + ") = " + to_string(result2) + " degrees";
+        history.add_result(output2);
 }
 
 // This is the definition of the arcsin function for the advance_trig class
-void advance_trig::arcsin(){
-    double x, result; // These are variables to store the input and the result
+void advance_trig::arcsin(history_list& history){
+    double x, result, result2; // These are variables to store the input and the result
         cout << "Enter your number in the range [-1, 1]: "; // This line prompts the user to enter a number
         cin >> x; // This line gets input from the user and stores it in x
 
         result = asin(x); // The asin function from the cmath library is used to calculate the arcsine of x
         cout << "arcsin" << "(" << x << ") = " << result << " radians" << endl; // This line prints the result in radians
-        cout << "arcsin" << "(" << x << ") = " << result * 180 / PI << " degrees" << endl << endl; // This line prints the result in degrees
+
+        result2 = result * 180 / PI;
+        cout << "arcsin" << "(" << x << ") = " << result2 << " degrees" << endl << endl; // This line prints the result in degrees
+
+        //to store the result in the calculator's history
+        string output = "arcsin (" + to_string(x) + ") = " + to_string(result) + " radians";
+        history.add_result(output);
+
+        string output2 = "arcsin (" + to_string(x) + ") = " + to_string(result2) + " degrees";
+        history.add_result(output2);
 }
 
 // This is the definition of the arctan function for the advance_trig class
-void advance_trig::arctan(){
-    double x, result; // These are variables to store the input and the result
+void advance_trig::arctan(history_list& history){
+    double x, result, result2; // These are variables to store the input and the result
         cout << "Enter your number (all real numbers): "; // This line prompts the user to enter a number
         cin >> x; // This line gets input from the user and stores it in x
 
         result = atan(x); // The atan function from the cmath library is used to calculate the arctangent of x
         cout << "arctan" << "(" << x << ") = " << result << " radians" << endl; // This line prints the result in radians
-        cout << "arctan" << "(" << x << ") = " << result * 180 / PI << " degrees" << endl << endl; // This line prints the result in degrees
+
+        result2 = result * 180 / PI;
+        cout << "arctan" << "(" << x << ") = " << result2 << " degrees" << endl << endl; // This line prints the result in degrees
+
+        //to store the result in the calculator's history
+        string output = "arctan (" + to_string(x) + ") = " + to_string(result) + " radians";
+        history.add_result(output);
+
+        string output2 = "arctan (" + to_string(x) + ") = " + to_string(result2) + " degrees";
+        history.add_result(output2);
     }
