@@ -10,6 +10,7 @@
 #include "addition.h"
 #include "substraction.h"
 #include "Trigonometry.h"
+#include "multiplication.h"
 
 using namespace std;
 
@@ -24,6 +25,7 @@ int main() {
     addition add;
     substraction subs;
     Trigonometry trig_function;
+    multiplication mul;
 
     system("cls");
     do {
@@ -58,7 +60,7 @@ int main() {
                 break;
 
             case 3:
-
+                mul.start
                 break;
 
             case 4:
