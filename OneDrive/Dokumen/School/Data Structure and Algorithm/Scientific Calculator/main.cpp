@@ -30,8 +30,7 @@ int main() {
         cout << "Press 9 for ln" << endl;
         cout << "Press 10 for trigonometry function" << endl;
         cout << "Press 11 for advance trigonometry function" << endl;
-        cout << "Press 12 for power" << endl;
-        cout << "Press 13 for showing the history list" << endl;
+        cout << "Press 12 for showing the history list" << endl;
 
         int chosen;
         cout << "What function do you want to use? ";
@@ -60,7 +59,7 @@ int main() {
                 break;
 
             case 6:
-
+                pow.start();
                 break;
 
             case 7:
@@ -82,12 +81,8 @@ int main() {
             case 11:
                 advTrig.start();
                 break;
-
+            
             case 12:
-                pow.start();
-                break;
-
-            case 13:
                 history.show_history();
                 break;
 
