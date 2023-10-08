@@ -14,7 +14,7 @@ void sqrtCalculator::start(history_list& history)
     cin >> sqrtnum;
 
     double sqrtval = sqrt(sqrtnum);
-    cout << "The square root of " << sqrtnum << " is " << sqrtval << "\n";
+    cout << "The square root of " << sqrtnum << " is " << sqrtval << "\n" << "\n";
 
     //to store the result in the calculator's history
     string output = "The square root of " + to_string(sqrtnum) + " is " + to_string(sqrtval);
