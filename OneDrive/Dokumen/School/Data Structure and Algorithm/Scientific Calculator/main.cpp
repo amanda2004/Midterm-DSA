@@ -74,7 +74,7 @@ int main() {
                 break;
 
             case 6:
-                pow.start();
+                pow.start(history);
                 break;
 
             case 7:
