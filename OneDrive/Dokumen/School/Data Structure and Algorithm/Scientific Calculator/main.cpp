@@ -1,14 +1,15 @@
-
 #include <iostream>
 #include <cstdlib>
 #include "advance_trig.h"
 #include "History.h"
+#include "powerclass.h"
 
 using namespace std;
 
 int main() {
     history_list history;
     advance_trig advTrig;
+    power pow;
 
     system("cls");
     do {
@@ -25,10 +26,11 @@ int main() {
         cout << "Press 8 for ln" << endl;
         cout << "Press 9 for trigonometry function" << endl;
         cout << "Press 10 for advance trigonometry function" << endl;
+        cout << "Press 11 for power" << endl;
         cout << "Press 11 for showing the history list" << endl;
 
         int chosen;
-        cout << "What function do you want to use? " << endl;
+        cout << "What function do you want to use? ";
         cin >> chosen;
 
 
@@ -74,6 +76,10 @@ int main() {
                 break;
 
             case 11:
+                pow.start();
+                break;
+
+            case 12:
                 history.show_history();
                 break;
 
