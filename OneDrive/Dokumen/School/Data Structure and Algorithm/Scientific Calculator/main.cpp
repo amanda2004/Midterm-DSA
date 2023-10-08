@@ -4,7 +4,7 @@
 #include "History.h"
 #include "powerclass.h"
 #include "sqrt.h"
-#include "logarithms10.h"
+#include "log10.h"
 #include "naturallogarithm.h"
 using namespace std;
 
