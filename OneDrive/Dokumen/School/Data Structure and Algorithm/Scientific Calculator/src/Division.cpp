@@ -10,24 +10,28 @@ void division::start(history_list& history)
 
 using namespace std;
 
-    double num1, num2, result;
+    double divide;
+    double n;
+    int numberitems;
+    cout << "How many number you want to divide? ";
+    cin >> numberitems;
 
-    // Input the two numbers
-    cout << "Enter the first number: ";
-    cin >> num1;
+    cout << "Enter number 1: " ;
+    cin >> n;
+    divide = n; // Store the first number in divide
 
-    cout << "Enter the second number: ";
-    cin >> num2;
+    string output = to_string(n); // Start the output string with the first number
 
-    // Check if the second number is not zero to avoid division by zero
-    if (num2 != 0) {
-        result = num1 / num2;
-        cout << "Result of division: " << result << endl << endl;
-    } else {
-        cout << "Error: Division by zero is not allowed." << endl << endl;
+    for(int i=2; i<=numberitems; i++)
+    {
+        cout << "Enter number " << i << ": " ;
+        cin >> n;
+        divide /= n;
+        output += " / " + to_string(n); // Add to the output string
     }
 
-    //to store the result in the calculator's history
-    string output = to_string(num1) + " / " + to_string(num2) + " = " + to_string(result);
+    output += " = " + to_string(divide); // Add the result to the output string
+    cout << output << endl << endl;
+
     history.add_result(output);
 }
