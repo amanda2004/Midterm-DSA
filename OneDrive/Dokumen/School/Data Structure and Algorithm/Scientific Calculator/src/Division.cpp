@@ -1,4 +1,4 @@
-#include "division.h"
+#include "division.h" 
 #include "History.h"
 #include <cmath>
 #include <cstdlib>
@@ -33,5 +33,5 @@ using namespace std;
     output += " = " + to_string(divide); // Add the result to the output string
     cout << output << endl << endl;
 
-    history.add_result(output);
+    history.add_result(output); //Add the division result to the history
 }
