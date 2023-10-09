@@ -9,7 +9,8 @@ using namespace std;
 
 void Trigonometry::start(history_list& history)
 {
-    do {
+    do { 
+        // Display menu options
         cout << "Press 1 for Sin" << endl;
         cout << "Press 2 for Cos" << endl;
         cout << "Press 3 for Tan" << endl;
@@ -50,6 +51,7 @@ void Trigonometry::calculateSine(history_list& history)
     cout << "Enter number (in degrees):";
     cin >> x;
 
+    // Calculate sine value and display the result
     result = sin(x * PI / 180.0);
     cout << "Sin(" << x << ") = " << result << endl;
 
@@ -64,6 +66,7 @@ void Trigonometry::calculateCosine(history_list& history)
     cout << "Enter number (in degrees):";
     cin >> x;
 
+    // Calculate cosine value and display the result
     result = cos(x * PI / 180.0);
     cout << "Cos(" << x << ") = " << result << endl;
 
@@ -78,6 +81,7 @@ void Trigonometry::calculateTangent(history_list& history)
     cout << "Enter number (in degrees):";
     cin >> x;
 
+    // Calculate tangent value and display the result
     result = tan(x * PI / 180.0);
     cout << "Tan(" << x << ") = " << result << endl;
 
