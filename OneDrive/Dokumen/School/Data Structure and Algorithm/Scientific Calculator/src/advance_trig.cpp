@@ -57,12 +57,13 @@ void advance_trig::arccos(history_list& history){
         result2 = result * 180 / PI;
         cout << "arccos" << "(" << x << ") = " << result2 << " degrees" << endl << endl;  // This line prints the result in degrees
 
-        //to store the result in the calculator's history
+        // This line is creating a string variable named 'output'.
         string output = "arccos (" + to_string(x) + ") = " + to_string(result) + " radians";
-        history.add_result(output);
+        history.add_result(output); // This line is adding the 'output' string to our history.
 
+        // This line is creating a string variable named 'output2'.
         string output2 = "arccos (" + to_string(x) + ") = " + to_string(result2) + " degrees";
-        history.add_result(output2);
+        history.add_result(output2); // This line is adding the 'output2' string to our history.
 }
 
 // This is the definition of the arcsin function for the advance_trig class
@@ -77,12 +78,15 @@ void advance_trig::arcsin(history_list& history){
         result2 = result * 180 / PI;
         cout << "arcsin" << "(" << x << ") = " << result2 << " degrees" << endl << endl; // This line prints the result in degrees
 
-        //to store the result in the calculator's history
+        // This line is creating a string variable named 'output'.
         string output = "arcsin (" + to_string(x) + ") = " + to_string(result) + " radians";
-        history.add_result(output);
+    
+        history.add_result(output); // This line is adding the 'output' string to our history.
 
+        // This line is creating a string variable named 'output2'.
         string output2 = "arcsin (" + to_string(x) + ") = " + to_string(result2) + " degrees";
-        history.add_result(output2);
+    
+        history.add_result(output2); // This line is adding the 'output2' string to our history.
 }
 
 // This is the definition of the arctan function for the advance_trig class
@@ -97,10 +101,13 @@ void advance_trig::arctan(history_list& history){
         result2 = result * 180 / PI;
         cout << "arctan" << "(" << x << ") = " << result2 << " degrees" << endl << endl; // This line prints the result in degrees
 
-        //to store the result in the calculator's history
+        // This line is creating a string variable named 'output'.
         string output = "arctan (" + to_string(x) + ") = " + to_string(result) + " radians";
-        history.add_result(output);
 
+        history.add_result(output); // This line is adding the 'output' string to our history.
+        
+        // This line is creating a string variable named 'output2'.
         string output2 = "arctan (" + to_string(x) + ") = " + to_string(result2) + " degrees";
-        history.add_result(output2);
+
+        history.add_result(output2); // This line is adding the 'output2' string to our history.
     }
