@@ -9,10 +9,12 @@ using namespace std;
 
 void naturallogarithm::start(history_list& history)
 {
+    // Prompts the user to input a number which we will find the natural logarithm of
     double lnnum;
     cout << "Enter a number: ";
     cin >> lnnum;
 
+    // Counts the ln value of the number using the C++ library
     double lnval = log (lnnum);
     cout << "The ln of " << lnnum << " is " << lnval << "\n" << "\n";
 
