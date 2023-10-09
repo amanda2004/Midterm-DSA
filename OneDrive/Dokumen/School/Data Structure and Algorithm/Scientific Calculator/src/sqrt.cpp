@@ -9,10 +9,12 @@ using namespace std;
 
 void sqrtCalculator::start(history_list& history)
 {
+    // Allows user to store a number
     double sqrtnum;
     cout << "Enter a number: ";
     cin >> sqrtnum;
 
+    // Counts the square root of the number
     double sqrtval = sqrt(sqrtnum);
     cout << "The square root of " << sqrtnum << " is " << sqrtval << "\n" << "\n";
 
