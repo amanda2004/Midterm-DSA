@@ -10,12 +10,13 @@ using namespace std;
 void LogCustomBase::start(history_list& history) 
 {
     double base, value;
-
+    // Allows the user to enter a base for the logarithm and a number
     cout << "Enter base number: ";
     cin >> base;
     cout << "Enter number: ";
     cin >> value;
-      
+
+    // Counts the number that the user inputted earlier using the formula stated below
     double logcustom = log(value) / log(base);
     cout << "The value of " << value << " with the base of " << base << " is " << logcustom << "\n" << "\n";
 
