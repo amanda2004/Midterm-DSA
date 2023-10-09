@@ -10,22 +10,28 @@ void multiplication ::start(history_list& history)
 
 using namespace std;
 
-   double num1, num2, result;
+    double multiply;
+    double n;
+    int numberitems;
+    cout << "How many number you want to multiply? ";
+    cin >> numberitems;
 
-    // Input
-    cout << "Enter the first number: ";
-    std::cin >> num1;
+    cout << "Enter number 1: " ;
+    cin >> n;
+    multiply = n; // Store the first number in multiply
 
-    cout << "Enter the second number: ";
-    cin >> num2;
+    string output = to_string(n); // Start the output string with the first number
 
-    // Calculation
-    result = num1 * num2;
+    for(int i=2; i<=numberitems; i++)
+    {
+        cout << "Enter number " << i << ": " ;
+        cin >> n;
+        multiply *= n;
+        output += " x " + to_string(n); // Add to the output string
+    }
 
-    // Output
-    cout << "Result: " << result << endl << endl;
+    output += " = " + to_string(multiply); // Add the result to the output string
+    cout << output << endl << endl;
 
-    //to store the result in the calculator's history
-    string output = to_string(num1) + " * " + to_string(num2) + " = " + to_string(result);
     history.add_result(output);
 }
