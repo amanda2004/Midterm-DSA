@@ -1,5 +1,5 @@
-#include "addition.h"
-#include "History.h"
+#include "addition.h" //Include the declaration of the 'addition' class
+#include "History.h" //Include the declaration of the 'history_list' class
 #include <cmath>
 #include <cstdlib>
 #include <iostream>
@@ -31,7 +31,8 @@ using namespace std;
     }
 
     output += " = " + to_string(add); // Add the result to the output string
-    cout << output << endl << endl;
+    cout << output << endl << endl; //Display the result
 
+    //Add the entire operation and result to the calculator's history
     history.add_result(output);
 }
