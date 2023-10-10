@@ -1,5 +1,10 @@
 #include <iostream>
 #include <cstdlib>
+#include <cctype>
+#include <string>
+#include <vector>
+#include <deque>
+#include <cmath>
 #include "advance_trig.h"
 #include "History.h"
 #include "powerclass.h"
@@ -13,7 +18,156 @@
 #include "multiplication.h"
 #include "division.h"
 
+
 using namespace std;
+
+class Token {
+public:
+    double num1, num2;
+    char op;
+
+    Token(double a, char b, double c) : num1(a), op(b), num2(c) {}
+    Token() : num1(0), op(0), num2(0) {}
+    void initialize(double a, char b, double c) { num1 = a; op = b; num2 = c; }
+    double solve() {
+        switch (op) {
+            case '+': return (num1 + num2);
+            case '-': return (num1 - num2);
+            case '*': return (num1 * num2);
+            case '/': return (num1 / num2);
+            case '^': return (pow(num1, num2));
+            case 'r': return (pow(num2, 1.0 / num1));
+            case 's': return (sin(num2 * M_PI / 180.0));
+            case 'c': return (cos(num2 * M_PI / 180.0));
+            case 't': return (tan(num2 * M_PI / 180.0));
+            case 'a': return (asin(num2) * 180.0 / M_PI);
+            case 'q': return (acos(num2) * 180.0 / M_PI);
+            case 'e': return (atan(num2) * 180.0 / M_PI);
+            case 'l': return (log10(num2));
+            case 'n': return (log(num2));
+        }
+        return 0.0;
+    }
+
+string expression;
+deque<double> numbers;
+deque<char> operators;
+
+void express() {
+    cout << "'+' to add\n'-' to subtract\n'*' to multiply\n'/' to divide\n'^' for powers\n'r' for roots\n";
+    cout << "'s' for sin\n'c' for cos\n't' for tan\n'a' for arcsin\n'q' for arccos\n'e' for arctan\n";
+    cout << "'l' for log10\n'n' for natural logarithm (ln)\n\n";
+    cout << "Enter your expression:\n";
+    cin >> expression;
+    return;
+}
+
+void extract() {
+    vector<int> digits;
+    unsigned int i, k;
+    int temp = 0;
+
+    for (i = 0; i <= expression.size(); i++) {
+        if (expression[i] >= '0' && expression[i] <= '9') {
+            digits.push_back(expression[i] - '0');
+        } else {
+            operators.push_back(expression[i]);
+            for (k = 0; k < digits.size(); k++) {
+                temp += digits.at(k) * pow(10, (digits.size() - 1 - k));
+            }
+            numbers.push_back(temp);
+            digits.clear();
+            temp = 0;
+        }
+    }
+    operators.erase(operators.end());
+}
+
+void addsub() {
+    Token tempToken;
+    double temp = numbers.at(0);
+
+    while (true) {
+        if (operators.at(0) == '+' || operators.at(0) == '-') {
+            numbers.erase(numbers.begin());
+            tempToken.initialize(temp, operators.at(0), numbers.at(0));
+            temp = tempToken.solve();
+
+            if (operators.size() == 1) {
+                operators.clear();
+                numbers.at(0) = temp;
+                return;
+            } else
+                operators.erase(operators.begin());
+        } else {
+            break;
+        }
+    }
+}
+
+void multidiv() {
+    Token tempToken;
+    double temp;
+    unsigned int i;
+
+    for (i = 0; i < operators.size(); i++) {
+        if (operators.at(i) == '*' || operators.at(i) == '/') {
+            tempToken.initialize(numbers.at(i), operators.at(i), numbers.at(i + 1));
+            temp = tempToken.solve();
+
+            if (operators.size() == 1) {
+                operators.clear();
+                numbers.at(0) = temp;
+                return;
+            } else {
+                operators.erase(operators.begin() + i);
+                numbers.erase(numbers.begin() + i + 1);
+                numbers.at(i) = temp;
+            }
+            --i;
+        }
+    }
+    addsub();
+}
+
+void calculate() {
+    Token tempToken;
+    double temp;
+    unsigned int i;
+
+    for (i = 0; i < operators.size(); i++) {
+        if (operators.at(i) == '^' || operators.at(i) == 'r' || operators.at(i) == 's' || operators.at(i) == 'c' || operators.at(i) == 't' ||
+            operators.at(i) == 'a' || operators.at(i) == 'q' || operators.at(i) == 'e' || operators.at(i) == 'l' || operators.at(i) == 'n') {
+            if (operators.at(i) == 't') {  // If the operator is 't' for tan
+                tempToken.initialize(0, operators.at(i), numbers.at(i + 1));  // Apply it to the next number
+            } else {
+                tempToken.initialize(numbers.at(i), operators.at(i), numbers.at(i + 1));
+            }
+            temp = tempToken.solve();
+
+            if (operators.size() == 1) {
+                operators.clear();
+                numbers.at(0) = temp;
+                return;
+            } else {
+                operators.erase(operators.begin() + i);
+                numbers.erase(numbers.begin() + i + 1);
+                numbers.at(i) = temp;
+            }
+            --i;
+        }
+    }
+    multidiv();
+}
+
+void start() {
+    express();
+    extract();
+    calculate();
+    cout << "Final answer: " << numbers.at(0) << endl << endl;
+}
+};
+
 
 int main() {
     history_list history;
@@ -28,6 +182,7 @@ int main() {
     Trigonometry trig_function;
     multiplication mul;
     division div;
+    Token token;
 
     system("cls");
     do {
@@ -47,7 +202,7 @@ int main() {
         cout << "Press 11 for advance trigonometry function" << endl;
         cout << "Press 12 for showing the history list" << endl;
         cout << "Press 13 for deleting the calculator's history" << endl;
-
+        cout << "Press 14 for custom calculation" << endl;
         int chosen;
         cout << "What function do you want to use? ";
         cin >> chosen;
@@ -97,7 +252,7 @@ int main() {
             case 11:
                 advTrig.start(history);
                 break;
-            
+
             case 12:
                 history.show_history();
                 break;
@@ -106,7 +261,12 @@ int main() {
                 history.delete_history();
                 cout << "History deleted." << endl << endl;
                 break;
-            
+
+            case 14:
+           token.start();  // Call start on the Token object
+                break;
+
+
             case 0:
                 exit(0);
                 break;
