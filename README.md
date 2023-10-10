@@ -81,6 +81,10 @@ Developer Group 3:
     - Show History List: This option displays a list of previous calculations with their results
     - Delete Calculator History: Empties the calculator's history list
 
+    Customized Function:
+    In this function, users can combine the function provided to calculate. So, the calculation is not limited
+    between functions. For example, using this function, you can do 7 + sin(30) x 9 + ln(9).
+
  **Video Presentation:**
  
  https://drive.google.com/file/d/1ZexUpqRH4EuOl-j5SeBLeqJsEVZAag-7/view?usp=drive_link  
