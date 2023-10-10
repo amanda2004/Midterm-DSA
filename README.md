@@ -79,4 +79,8 @@ Developer Group 3:
     both the original calculation and its result are displayed. If desired, the user has the option to delete 
     the calculator's history, effectively erasing the list of prior calculations.
     - Show History List: This option displays a list of previous calculations with their results
-    - Delete Calculator History: Empties the calculator's history list.
+    - Delete Calculator History: Empties the calculator's history list
+
+ **Video Presentation:**
+ 
+ https://drive.google.com/file/d/1ZexUpqRH4EuOl-j5SeBLeqJsEVZAag-7/view?usp=drive_link  
