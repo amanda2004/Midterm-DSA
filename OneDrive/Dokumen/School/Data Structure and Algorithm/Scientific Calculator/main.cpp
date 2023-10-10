@@ -59,6 +59,7 @@ void express() {
     cout << "'l' for log10 (ex: log10(20)= l20, remember l is not one)\n'n' for natural logarithm (ln) (ex: ln(4) = n4)\n\n";
     cout << "Enter your expression (NO SPACE):\n";
     cin >> expression;
+
     return;
 }
 
@@ -160,12 +161,14 @@ void calculate() {
     multidiv();
 }
 
-void start() {
+void start(history_list& history) {
     express();
     extract();
     calculate();
     cout << "Final answer: " << numbers.at(0) << endl << endl;
-}
+
+    history.add_result(expression + " = " + to_string(numbers.at(0)));
+    }
 };
 
 
@@ -263,7 +266,7 @@ int main() {
                 break;
 
             case 14:
-           token.start();  // Call start on the Token object
+                token.start(history);  // Call start on the Token object
                 break;
 
 
