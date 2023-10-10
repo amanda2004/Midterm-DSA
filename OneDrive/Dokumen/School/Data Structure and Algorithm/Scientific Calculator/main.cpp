@@ -21,14 +21,20 @@
 
 using namespace std;
 
+//Define an inline class called Token to handle customized mathematical expression
 class Token {
 public:
     double num1, num2;
     char op;
 
+    //Constructor to initialize the class with value
     Token(double a, char b, double c) : num1(a), op(b), num2(c) {}
     Token() : num1(0), op(0), num2(0) {}
+
+    //Initialize the class with new value
     void initialize(double a, char b, double c) { num1 = a; op = b; num2 = c; }
+
+    //Function to perform mathematical operations based on the operator
     double solve() {
         switch (op) {
             case '+': return (num1 + num2);
@@ -53,6 +59,7 @@ string expression;
 deque<double> numbers;
 deque<char> operators;
 
+//Function to input the mathematical expression
 void express() {
     cout << "'+' to add\n'-' to subtract\n'*' to multiply\n'/' to divide\n'^' for powers (ex: 2^2) \n'r' for roots (ex: square root of 4: 2r4, cube root of 27: 3r27, etc.) \n";
     cout << "'s' for sin (ex: sin(30) = s30)\n'c' for cos (ex: cos(30) = c30) \n't' for tan (ex: tan(30) = t30) \n'a' for arcsin (ex: arcsin(1) = a1) \n'q' for arccos (ex: arcos(1) = q1)\n'e' for arctan (ex: arctan(5) = e5) \n";
@@ -63,6 +70,7 @@ void express() {
     return;
 }
 
+//Function to extract numbers and operators from the expression
 void extract() {
     vector<int> digits;
     unsigned int i, k;
@@ -84,6 +92,7 @@ void extract() {
     operators.erase(operators.end());
 }
 
+//Function to perform addition and subtraction operations
 void addsub() {
     Token tempToken;
     double temp = numbers.at(0);
@@ -106,6 +115,7 @@ void addsub() {
     }
 }
 
+//Function to perform multiplication and division operations
 void multidiv() {
     Token tempToken;
     double temp;
@@ -131,6 +141,7 @@ void multidiv() {
     addsub();
 }
 
+//Function to calculate the result based on the expression
 void calculate() {
     Token tempToken;
     double temp;
@@ -161,6 +172,7 @@ void calculate() {
     multidiv();
 }
 
+//Function to start the calculation process
 void start(history_list& history) {
     express();
     extract();
@@ -171,7 +183,7 @@ void start(history_list& history) {
     }
 };
 
-
+//Entry point of the program
 int main() {
     history_list history;
     advance_trig advTrig;
